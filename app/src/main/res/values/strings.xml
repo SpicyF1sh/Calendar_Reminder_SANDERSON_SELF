@@ -12,4 +12,6 @@
     <string name="login_field_error">Be sure you have a valid email and password.</string>
     <string name="title_welcome">Welcome to OurPlanner!</string>
     <string name="create_event_title">Create New Event</string>
+    <string name="current_streak_score_string">0</string>
+    <string name="best_streak_score_string">0</string>
 </resources>

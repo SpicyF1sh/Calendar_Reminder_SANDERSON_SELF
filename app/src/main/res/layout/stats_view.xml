@@ -1,6 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_weight="2">
 
+    //// Title ////
+    <TextView
+        android:id="@+id/statsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="STATS"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/spacer"
+        android:layout_marginTop="@dimen/spacer"
+        android:layout_marginEnd="@dimen/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"/>
+'
+    //// Today's Progress ////
+    <TextView
+        android:id="@+id/todays_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today's Progress:"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/spacer"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="@dimen/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statsTitle"/>
+    <ProgressBar
+        android:id="@+id/todays_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/CalenderViewCustom"
+        android:layout_marginStart="@dimen/spacer"
+        android:layout_marginTop="@dimen/spacer"
+        android:layout_marginEnd="@dimen/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todays_progress" />
+
+    //// Current Streak ////
+    <TextView
+        android:id="@+id/current_streak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Streak:"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/spacer"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="@dimen/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/todays_progress_bar"/>
+    <TextView
+        android:id="@+id/current_streak_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/current_streak_score_string"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/spacer"
+        android:layout_marginTop="@dimen/spacer"
+        android:layout_marginEnd="@dimen/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_streak"/>
+    
+    //// Best Streak ////
+    <TextView
+        android:id="@+id/best_streak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Best Streak:"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/spacer"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="@dimen/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_streak_score"/>
+    <TextView
+        android:id="@+id/best_streak_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/best_streak_score_string"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/spacer"
+        android:layout_marginTop="@dimen/spacer"
+        android:layout_marginEnd="@dimen/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/best_streak"/>
 </android.support.constraint.ConstraintLayout>
