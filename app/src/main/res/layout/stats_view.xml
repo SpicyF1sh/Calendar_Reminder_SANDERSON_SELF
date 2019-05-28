@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/current_streak"/>
-    
+
     //// Best Streak ////
     <TextView
         android:id="@+id/best_streak"
